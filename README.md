@@ -1,7 +1,7 @@
-(RuBot)[https://github.com/justinweiss/robut] is the friendly Ruby Bot, that talks XMPP.
+[RuBot](https://github.com/justinweiss/robut) is the friendly Ruby Bot, that talks XMPP.
 
 This repository holds RoBut plugins, that make RuBot talk to
-(MCollective)[https://github.com/puppetlabs/puppetlabs-mcollective], so you may say `@robut deploy foobar`.
+[MCollective](https://github.com/puppetlabs/puppetlabs-mcollective), so you may say `@robut deploy foobar`.
 
 # What currently in here?
 
