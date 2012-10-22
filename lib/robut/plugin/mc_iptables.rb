@@ -63,7 +63,7 @@ class Robut::Plugin::MCIptables
         error "Got #{e.class}. #{e.message} - #{e.backtrace.join("\t\n")}"
       end
     end
-    return true
+    true
   end
 
   # This uses the MCollective style, where RPC-Errors are handled by MCollective code
@@ -84,6 +84,6 @@ class Robut::Plugin::MCIptables
 
   match /^ip (block|unblock) ([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)/, :sent_to_me => true do |action, ipaddr|
     block_unblock(action.to_sym, ipaddr)
-    return true
+    true
   end
 end
