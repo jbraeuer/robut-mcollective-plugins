@@ -1,6 +1,6 @@
 require 'mcollective'
 
-# A plugin that triggers deployments
+# A plugin Rubot plugin that talks for MCollective/iptables
 class Robut::Plugin::MCIptables
   include Robut::Plugin
   include MCollective::RPC
