@@ -1,4 +1,8 @@
- #!/usr/bin/ruby
+#!/usr/bin/ruby
+
+#
+# Simple example how to use MCollective from within Ruby.
+#
 
 require 'pp'
 require 'mcollective'
