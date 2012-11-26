@@ -1,7 +1,7 @@
 require 'mcollective'
 
 # A plugin Rubot plugin that talks for MCollective/iptables
-class Robut::Plugin::MCIptables
+class Robut::Plugin::Mcollective::Iptables
   include Robut::Plugin
   include MCollective::RPC
 
