@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p $$(pwd)/debian/robut-mcollective/usr/lib/ruby/vendor_ruby/
+	cp -r lib/* $$(pwd)/debian/robut-mcollective/usr/lib/ruby/vendor_ruby/
+
+	mkdir -p $$(pwd)/debian/robut-mcollective/
+	cp -r etc $$(pwd)/debian/robut-mcollective/

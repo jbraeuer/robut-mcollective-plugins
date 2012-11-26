@@ -1,0 +1,11 @@
+Source: robut-mcollective
+Maintainer: Jens Braeuer <jens.braeuer@commercetools.de>
+Section: misc
+Priority: optional
+Standards-Version: 2.0.1
+Build-Depends: debhelper (>= 8)
+
+Package: robut-mcollective
+Architecture: all
+Depends: ${perl:Depends}, ${misc:Depends}, robut
+Description: SSL certificate check

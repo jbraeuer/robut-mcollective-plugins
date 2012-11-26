@@ -1,0 +1,5 @@
+robut-mcollective (0.1.0) unstable; urgency=low
+
+  * Packaged as debian package
+
+ -- Jens Braeuer <jens.braeuer@commercetools.de>  Fri, 17 Aug 2012 11:11:11 +0100
