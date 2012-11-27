@@ -2,3 +2,4 @@ debian/robut-mcollective.debhelper.log
 debian/robut-mcollective.substvars
 debian/robut-mcollective
 *~
+/debian/files
