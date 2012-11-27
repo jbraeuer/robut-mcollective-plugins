@@ -16,8 +16,12 @@ mc = rpcclient("iptables", {:options => options })
 act = :listblocked
 args = {}
 
-act = :block
-args = {:ipaddr => "1.2.3.4"}
+#act = :block
+#args = {:ipaddr => "1.2.3.4"}
+
+mc.fact_filter("roles", "/vagranx/")
+
+pp options
 
  mc.send(act, args) do |resp, _|
    begin
