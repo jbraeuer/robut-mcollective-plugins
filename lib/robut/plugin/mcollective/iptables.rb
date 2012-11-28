@@ -6,11 +6,11 @@ class Robut::Plugin::Mcollective::Iptables
   include MCollective::RPC
 
   def debug(msg)
-    connection.config.logger.debug "MCIptables: #{msg}"
+    connection.config.logger.debug "Iptables: #{msg}"
   end
 
   def error(msg)
-    connection.config.logger.error "MCIptables: #{msg}"
+    connection.config.logger.error "Iptables: #{msg}"
   end
 
   def initialize(reply_to, private_sender = nil)
