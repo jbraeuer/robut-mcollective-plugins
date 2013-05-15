@@ -6,6 +6,10 @@ module Robut::Plugin::Mcollective
   def mc_ok?(r)
     mc_status(r) == 0
   end
+
+  def mc_sender(r)
+    r[:senderid]
+  end
 end
 
 module Robut::Plugin::Mcollective::Packages
@@ -32,3 +36,30 @@ module Robut::Plugin::Mcollective::Service
   end
 end
 
+module Robut::Plugin::Mcollective::Puppetd
+  def puppetd_status(r)
+    r[:body][:data][:status]
+  end
+
+  def puppetd_status_inactive(r)
+    ["disabled", "idling", "stopped"].include? puppetd_status(r)
+  end
+
+  def puppetd_status_active(r)
+    not puppetd_status_inactive(r)
+  end
+
+  def puppetd_lastrun(r)
+    r[:body][:data][:lastrun]
+  end
+end
+
+module Robut::Plugin::Mcollective::Package
+  def package_name(r)
+    r[:body][:data][:name]
+  end
+
+  def package_version(r)
+    r[:body][:data][:ensure]
+  end
+end
