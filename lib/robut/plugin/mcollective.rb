@@ -63,3 +63,13 @@ module Robut::Plugin::Mcollective::Package
     r[:body][:data][:ensure]
   end
 end
+
+module Robut::Plugin::Mcollective::Git
+  def git_ok?(r)
+    r[:body][:data][:status] == 0
+  end
+
+  def git_output(r)
+    r[:body][:data][:output]
+  end
+end
