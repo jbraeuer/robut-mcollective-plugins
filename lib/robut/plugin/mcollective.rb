@@ -73,3 +73,19 @@ module Robut::Plugin::Mcollective::Git
     r[:body][:data][:output]
   end
 end
+
+module Robut::Plugin::Mcollective::SphereTools
+  def spheretools_ok?(r)
+    r[:body][:data][:status] == 0
+  end
+
+  def spheretools_output(r)
+    r[:body][:data][:output]
+  end
+end
+
+module Robut::Plugin::Mcollective::Monitoring
+  def mon_ok?(r)
+    r[:body][:data][:status] == 0
+  end
+end
